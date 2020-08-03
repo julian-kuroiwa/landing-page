@@ -27,7 +27,7 @@ export type SectionAboutProjectProps = {
   }
 }
 
-type techIconsProps = {
+type techIcon = {
   id: string
   title: string
   icon: {
@@ -38,7 +38,17 @@ type techIconsProps = {
 
 export type SectionTechProps = {
   title: string
-  techIcons: techIconsProps[]
+  techIcons: techIcon[]
+}
+
+type Concept = {
+  id: string
+  title: string
+}
+
+export type SectionConceptsProps = {
+  title: string
+  concepts: Array<{ title: string }>
 }
 
 export type LandingPageProps = {
@@ -46,4 +56,5 @@ export type LandingPageProps = {
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
 }
